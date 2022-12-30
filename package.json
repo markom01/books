@@ -1,0 +1,55 @@
+{
+  "name": "books-store",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@fontsource/roboto": "latest",
+    "@mui/base": "^5.0.0-alpha.110",
+    "@mui/icons-material": "latest",
+    "@mui/material": "latest",
+    "@testing-library/jest-dom": "latest",
+    "@testing-library/react": "latest",
+    "@testing-library/user-event": "latest",
+    "@types/jest": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "react-scripts": "latest",
+    "react-test-renderer": "^18.2.0",
+    "typescript": "latest",
+    "web-vitals": "latest"
+  },
+  "scripts": {
+    "install-start": "npm i && react-scripts start",
+    "build-view": "npm run build && serve -s build",
+    "start": "react-scripts start",
+    "build": "react-scripts build --env.webpackAliases=./config/webpack-aliases.js",
+    "test": "react-scripts test"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/react-test-renderer": "^18.0.0"
+  }
+}
