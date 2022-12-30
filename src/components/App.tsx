@@ -27,6 +27,7 @@ export interface BookTypes {
 }
 
 export interface DataTypes {
+  records: BookTypes[];
   start: number;
   limit: number;
   totalRecords: number;
@@ -43,15 +44,14 @@ export interface DataTypes {
 type ContextType = [DataTypes, React.Dispatch<React.SetStateAction<DataTypes>>];
 
 const initBooks: DataTypes = {
+  records: booksJSON.records,
   start: 0,
   limit: 0,
   totalRecords: 0,
   error: "",
   isLoading: false,
   selectedAuthor: "Any Author",
-  selectedBooks:
-    // get selected books from local storage
-    JSON.parse(localStorage.getItem("selectedBooks")!) || booksJSON.records,
+  selectedBooks: booksJSON.records,
   mutatedBooksCount: 0, //edited, deleted, added
   isPreviewVisible: false,
   bookPreviewData: {
