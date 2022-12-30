@@ -7,7 +7,6 @@ import DialogTitle from "@mui/material/DialogTitle";
 import TextField from "@mui/material/TextField";
 import * as React from "react";
 import { useState } from "react";
-import { patchData } from "../hooks/useFetch";
 import { BookTypes, DataTypes } from "./App";
 
 interface EnhancedDialogProps {
@@ -38,9 +37,17 @@ export default function EnhancedDialog({
   const handleMutateBooks = () => {
     setBooks((prev) => ({
       ...prev,
+      //change the quantity of the book in the selectedBooks array
+      selectedBooks: prev.selectedBooks.map((book) =>
+        book.id === bookPreviewData.id ? { ...book, quantity: +value } : book
+      ),
       mutatedBooksCount: prev.mutatedBooksCount + 1,
       isPreviewVisible: false,
     }));
+    // localStorage.setItem(
+    //   "selectedBooks",
+    //   JSON.stringify(books.selectedBooks)
+    // );
     alert(`Book ${bookPreviewData.title} quantity count is now ${value}.`);
   };
   return (
@@ -84,11 +91,7 @@ export default function EnhancedDialog({
                   .toLowerCase()}.jpg`,
                 quantity: +value,
               });
-              patchData({
-                id: bookPreviewData.id,
-                body: body,
-                handleMutateBooks: handleMutateBooks,
-              });
+              handleMutateBooks();
             }}
           >
             Done

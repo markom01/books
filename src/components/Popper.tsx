@@ -10,7 +10,6 @@ import {
 import Fade from "@mui/material/Fade";
 import Popper from "@mui/material/Popper";
 import * as React from "react";
-import { deleteData } from "../hooks/useFetch";
 import { BookTypes, DataTypes } from "./App";
 
 interface Props {
@@ -25,9 +24,16 @@ export default function EnhancedPopper({ bookPreviewData, setBooks }: Props) {
   const handleMutateBooks = () => {
     setBooks((prev) => ({
       ...prev,
+      selectedBooks: prev.selectedBooks.filter(
+        (book) => book.id !== bookPreviewData.id
+      ),
       mutatedBooksCount: prev.mutatedBooksCount + 1,
       isPreviewVisible: false,
     }));
+    // localStorage.setItem(
+    //   "selectedBooks",
+    //   JSON.stringify(prev.selectedBooks)
+    // );
     alert(`Book ${bookPreviewData.title} deleted successfully.`);
   };
 
@@ -67,10 +73,7 @@ export default function EnhancedPopper({ bookPreviewData, setBooks }: Props) {
                 sx={{ px: 5 }}
                 startIcon={<DeleteIcon />}
                 onClick={() => {
-                  deleteData({
-                    id: bookPreviewData.id,
-                    handleMutateBooks: handleMutateBooks,
-                  });
+                  handleMutateBooks();
                 }}
               >
                 Delete

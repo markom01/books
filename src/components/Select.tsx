@@ -10,7 +10,7 @@ export default function MySelect() {
     setBooks((prev) => ({
       ...prev,
       selectedAuthor: event.target.value,
-      selectedBooks: prev.records.filter((book) => {
+      selectedBooks: prev.selectedBooks.filter((book) => {
         if (event.target.value === "Any Author") return true;
         return book.nameOfAuthor === event.target.value;
       }),
@@ -52,7 +52,7 @@ export default function MySelect() {
         displayEmpty
       >
         <MenuItem value="Any Author">Any Author</MenuItem>
-        {books.records
+        {books.selectedBooks
           //check for duplicates
           .filter(
             (book, i, books) =>

@@ -4,7 +4,6 @@ import EditIcon from "@mui/icons-material/Edit";
 import { Box, IconButton, Stack, Tooltip, Typography } from "@mui/material";
 import Grid2 from "@mui/material/Unstable_Grid2/Grid2";
 import { useContext } from "react";
-import { deleteData } from "../hooks/useFetch";
 import { Context } from "./App";
 import EnhancedDialog from "./Dialog";
 
@@ -14,6 +13,10 @@ export default function Preview() {
   const handleMutateBooks = () => {
     setBooks((prev) => ({
       ...prev,
+      // delete the book from the selectedBooks array
+      selectedBooks: prev.selectedBooks.filter(
+        (book) => book.id !== bookPreviewData.id
+      ),
       mutatedBooksCount: prev.mutatedBooksCount + 1,
       isPreviewVisible: false,
     }));
@@ -57,10 +60,7 @@ export default function Preview() {
               <IconButton
                 sx={{ color: "white" }}
                 onClick={() => {
-                  deleteData({
-                    id: bookPreviewData.id,
-                    handleMutateBooks: handleMutateBooks,
-                  });
+                  handleMutateBooks();
                 }}
               >
                 <DeleteIcon sx={{ fontSize: { sm: "30px" } }} />
@@ -194,7 +194,7 @@ export default function Preview() {
                 {headerData[2].label}
               </Grid2>
               <Grid2 xs component="dd">
-                {bookPreviewData.yearOfBublishing}
+                {bookPreviewData.yearOfPublishing}
               </Grid2>
             </Grid2>
             <Grid2 container>
@@ -202,7 +202,7 @@ export default function Preview() {
                 {headerData[3].label}
               </Grid2>
               <Grid2 xs component="dd">
-                {bookPreviewData.numOfPages}
+                {bookPreviewData.numberOfPages}
               </Grid2>
             </Grid2>
             <Grid2 container>

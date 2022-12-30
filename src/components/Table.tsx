@@ -136,8 +136,8 @@ export default function MyTable() {
                 }
                 if (isPageNumOrderAsc !== undefined) {
                   return isPageNumOrderAsc
-                    ? a.numOfPages - b.numOfPages
-                    : b.numOfPages - a.numOfPages;
+                    ? a.numberOfPages - b.numberOfPages
+                    : b.numberOfPages - a.numberOfPages;
                 }
                 return 0;
               })
@@ -205,7 +205,7 @@ export default function MyTable() {
                       minWidth: 110,
                     }}
                   >
-                    {book.yearOfBublishing}
+                    {book.yearOfPublishing}
                   </TableCell>
                   <TableCell
                     sx={{
@@ -213,7 +213,7 @@ export default function MyTable() {
                     }}
                     align="center"
                   >
-                    {book.numOfPages}
+                    {book.numberOfPages}
                   </TableCell>
                   <TableCell
                     sx={{

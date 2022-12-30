@@ -1,0 +1,238 @@
+{
+  "records": [
+    {
+      "id": 3,
+      "isbn": 3,
+      "title": "The Divine Comedy",
+      "nameOfAuthor": "Dante Alighieri",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 928,
+      "yearOfPublishing": 1315,
+      "quantity": 39,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/the-divine-comedy.jpg"
+    },
+    {
+      "id": 5,
+      "isbn": 5,
+      "title": "Leaves of Grass",
+      "nameOfAuthor": "Walt Whitman",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 152,
+      "yearOfPublishing": 1855,
+      "quantity": 34,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/leaves-of-grass.jpg"
+    },
+    {
+      "id": 6,
+      "isbn": 6,
+      "title": "Memoirs of Hadrian",
+      "nameOfAuthor": "Marguerite Yourcenar",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 408,
+      "yearOfPublishing": 1951,
+      "quantity": 51,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/memoirs-of-hadrian.jpg"
+    },
+    {
+      "id": 7,
+      "isbn": 7,
+      "title": "The Death of Ivan Ilyich",
+      "nameOfAuthor": "Leo Tolstoy",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 92,
+      "yearOfPublishing": 1886,
+      "quantity": 7,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/the-death-of-ivan-ilyich.jpg"
+    },
+    {
+      "id": 8,
+      "isbn": 8,
+      "title": "Pride and Prejudice",
+      "nameOfAuthor": "Jane Austen",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 226,
+      "yearOfPublishing": 1813,
+      "quantity": 39,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/pride-and-prejudice.jpg"
+    },
+    {
+      "id": 11,
+      "isbn": 11,
+      "title": "The Decameron",
+      "nameOfAuthor": "Giovanni Boccaccio",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 1024,
+      "yearOfPublishing": 1351,
+      "quantity": 88,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/the-decameron.jpg"
+    },
+    {
+      "id": 12,
+      "isbn": 12,
+      "title": "Ficciones",
+      "nameOfAuthor": "Jorge Luis Borges",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 224,
+      "yearOfPublishing": 1965,
+      "quantity": 41,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/ficciones.jpg"
+    },
+    {
+      "id": 14,
+      "isbn": 14,
+      "title": "The Stranger",
+      "nameOfAuthor": "Albert Camus",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 185,
+      "yearOfPublishing": 1942,
+      "quantity": 13,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/the-stranger.jpg"
+    },
+    {
+      "id": 15,
+      "isbn": 15,
+      "title": "Poems",
+      "nameOfAuthor": "Paul Celan",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 320,
+      "yearOfPublishing": 1952,
+      "quantity": 74,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/poems-paul-celan.jpg"
+    },
+    {
+      "id": 16,
+      "isbn": 16,
+      "title": "Journey to the End of the Night",
+      "nameOfAuthor": "Louis-Ferdinand Céline",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 505,
+      "yearOfPublishing": 1932,
+      "quantity": 36,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/voyage-au-bout-de-la-nuit.jpg"
+    },
+    {
+      "id": 17,
+      "isbn": 17,
+      "title": "Don Quijote De La Mancha",
+      "nameOfAuthor": "Miguel de Cervantes",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 1056,
+      "yearOfPublishing": 1610,
+      "quantity": 48,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/don-quijote-de-la-mancha.jpg"
+    },
+    {
+      "id": 18,
+      "isbn": 18,
+      "title": "The Canterbury Tales",
+      "nameOfAuthor": "Geoffrey Chaucer",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 544,
+      "yearOfPublishing": 1450,
+      "quantity": 66,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/the-canterbury-tales.jpg"
+    },
+    {
+      "id": 19,
+      "isbn": 19,
+      "title": "Stories",
+      "nameOfAuthor": "Anton Chekhov",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 194,
+      "yearOfPublishing": 1886,
+      "quantity": 100,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/stories-of-anton-chekhov.jpg"
+    },
+    {
+      "id": 20,
+      "isbn": 20,
+      "title": "Nostromo",
+      "nameOfAuthor": "Joseph Conrad",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 320,
+      "yearOfPublishing": 1904,
+      "quantity": 61,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/nostromo.jpg"
+    },
+    {
+      "id": 21,
+      "isbn": 21,
+      "title": "Great Expectations",
+      "nameOfAuthor": "Charles Dickens",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 194,
+      "yearOfPublishing": 1861,
+      "quantity": 83,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/great-expectations.jpg"
+    },
+    {
+      "id": 22,
+      "isbn": 22,
+      "title": "Jacques the Fatalist",
+      "nameOfAuthor": "Denis Diderot",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 596,
+      "yearOfPublishing": 1796,
+      "quantity": 96,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/jacques-the-fatalist.jpg"
+    },
+    {
+      "id": 23,
+      "isbn": 23,
+      "title": "Berlin Alexanderplatz",
+      "nameOfAuthor": "Alfred Döblin",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 600,
+      "yearOfPublishing": 1929,
+      "quantity": 70,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/berlin-alexanderplatz.jpg"
+    },
+    {
+      "id": 24,
+      "isbn": 24,
+      "title": "Crime and Punishment",
+      "nameOfAuthor": "Fyodor Dostoevsky",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 551,
+      "yearOfPublishing": 1866,
+      "quantity": 38,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/crime-and-punishment.jpg"
+    },
+    {
+      "id": 25,
+      "isbn": 25,
+      "title": "The Idiot",
+      "nameOfAuthor": "Fyodor Dostoevsky",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 656,
+      "yearOfPublishing": 1869,
+      "quantity": 56,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/the-idiot.jpg"
+    },
+    {
+      "id": 26,
+      "isbn": 26,
+      "title": "The Possessed",
+      "nameOfAuthor": "Fyodor Dostoevsky",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 768,
+      "yearOfPublishing": 1872,
+      "quantity": 877,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/the-possessed.jpg"
+    },
+    {
+      "id": 27,
+      "isbn": 27,
+      "title": "The Brothers Karamazov",
+      "nameOfAuthor": "Fyodor Dostoevsky",
+      "dateOfBirthAuthor": "1930-11-16",
+      "numberOfPages": 824,
+      "yearOfPublishing": 1880,
+      "quantity": 84,
+      "coverPhoto": "https://book-store.mvsoft.co.rs/assets/images/the-brothers-karamazov.jpg"
+    }
+  ],
+  "start": 0,
+  "limit": 0,
+  "totalRecords": 21
+}

@@ -121,7 +121,9 @@ export default function EditPage() {
 
   const generateIsbn = () => {
     let isbn = Math.floor(Math.random() * 100);
-    while (books.records.find((record) => record.isbn === isbn && isbn !== 0)) {
+    while (
+      books.selectedBooks.find((record) => record.isbn === isbn && isbn !== 0)
+    ) {
       isbn = Math.floor(Math.random() * 100);
     }
     return isbn;
@@ -133,25 +135,25 @@ export default function EditPage() {
     const formData = new FormData(e.target as HTMLFormElement);
     formData.set("coverPhoto", "");
     formData.set("isbn", isbn.toString());
+    formData.set("id", isbn.toString());
 
     if (books.error !== "Fill in the form correctly") {
-      fetch(`https://book-store.mvsoft.co.rs/books`, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(Object.fromEntries(formData)),
-      })
-        .then((r) => r.json())
-        .then(() => {
-          setBooks((prev) => ({
-            ...prev,
-            mutatedBooksCount: prev.mutatedBooksCount + 1,
-          }));
-          alert("Book added.");
-          navigate("/");
-        });
+      setBooks((prev: any) => ({
+        ...prev,
+        // add new book to the selected books
+        selectedBooks: [
+          ...prev.selectedBooks,
+          Object.fromEntries(formData.entries()),
+        ],
+        mutatedBooksCount: prev.mutatedBooksCount + 1,
+      }));
+      // ad selected books to local storage
+      localStorage.setItem(
+        "selectedBooks",
+        JSON.stringify(books.selectedBooks)
+      );
+      alert("Book added.");
+      navigate("/");
     }
   };
 

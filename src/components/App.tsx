@@ -1,4 +1,5 @@
-import React, { createContext, useEffect, useState } from "react";
+import React, { createContext, useState } from "react";
+import booksJSON from "../data/books.json";
 import Home from "../routes/Home";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -18,15 +19,14 @@ export interface BookTypes {
   isbn: number;
   title: string;
   nameOfAuthor: string;
-  dateOfBirthAuthor: Date;
-  numOfPages: number;
-  yearOfBublishing: number;
+  dateOfBirthAuthor: string | Date;
+  numberOfPages: number;
+  yearOfPublishing: number;
   quantity: number;
   coverPhoto: string;
 }
 
 export interface DataTypes {
-  records: BookTypes[];
   start: number;
   limit: number;
   totalRecords: number;
@@ -43,14 +43,15 @@ export interface DataTypes {
 type ContextType = [DataTypes, React.Dispatch<React.SetStateAction<DataTypes>>];
 
 const initBooks: DataTypes = {
-  records: [],
   start: 0,
   limit: 0,
   totalRecords: 0,
   error: "",
-  isLoading: true,
+  isLoading: false,
   selectedAuthor: "Any Author",
-  selectedBooks: [],
+  selectedBooks:
+    // get selected books from local storage
+    JSON.parse(localStorage.getItem("selectedBooks")!) || booksJSON.records,
   mutatedBooksCount: 0, //edited, deleted, added
   isPreviewVisible: false,
   bookPreviewData: {
@@ -59,8 +60,8 @@ const initBooks: DataTypes = {
     title: "",
     nameOfAuthor: "",
     dateOfBirthAuthor: new Date(),
-    numOfPages: 0,
-    yearOfBublishing: 0,
+    numberOfPages: 0,
+    yearOfPublishing: 0,
     quantity: 0,
     coverPhoto: "",
   },
@@ -89,35 +90,6 @@ const router = createBrowserRouter([
 
 function App() {
   const [books, setBooks] = useState<DataTypes>(initBooks);
-
-  useEffect(() => {
-    fetch(`https://book-store.mvsoft.co.rs/books`, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-      },
-    })
-      .then((r) => r.json())
-      .then((d) => {
-        setBooks((prev) => ({
-          ...prev,
-          ...d,
-          selectedBooks: d.records,
-        }));
-      })
-      .catch((error) => {
-        setBooks((prev) => ({
-          ...prev,
-          error: error.message,
-        }));
-      })
-      .finally(() => {
-        setBooks((prev) => ({
-          ...prev,
-          isLoading: false,
-        }));
-      });
-  }, [books.mutatedBooksCount]);
 
   return (
     <Context.Provider value={[books, setBooks]}>
