@@ -4,7 +4,6 @@ import { GlobalStyles } from "@mui/styled-engine";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./components/App";
-import "./styles/index.scss";
 import theme from "./theme";
 // import reportWebVitals from "./reportWebVitals";
 
