@@ -7,7 +7,6 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { TableCellProps } from "@mui/material/TableCell";
 import EditPage from "../routes/EditPage";
 import ErrorPage from "../routes/errorPage";
-import "../styles/App.scss";
 
 interface HeaderDataTypes {
   align: TableCellProps["align"];
